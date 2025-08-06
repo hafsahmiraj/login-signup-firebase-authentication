@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/login-signup-firebase-authentication/static/css/main.71ed0b8c.css",
+    "main.js": "/login-signup-firebase-authentication/static/js/main.8e13c45e.js",
+    "static/js/453.fe2d0dda.chunk.js": "/login-signup-firebase-authentication/static/js/453.fe2d0dda.chunk.js",
+    "index.html": "/login-signup-firebase-authentication/index.html",
+    "main.71ed0b8c.css.map": "/login-signup-firebase-authentication/static/css/main.71ed0b8c.css.map",
+    "main.8e13c45e.js.map": "/login-signup-firebase-authentication/static/js/main.8e13c45e.js.map",
+    "453.fe2d0dda.chunk.js.map": "/login-signup-firebase-authentication/static/js/453.fe2d0dda.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71ed0b8c.css",
+    "static/js/main.8e13c45e.js"
+  ]
+}
