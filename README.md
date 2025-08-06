@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# Firebase Authentication App
+
+This project is a Firebase authentication app using React that supports user registration, login, and email verification.
+
+## Features
+
+- User registration
+- User login
+- Email verification
+- Secure protected routes
+
+## Scripts
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
