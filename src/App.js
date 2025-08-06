@@ -7,6 +7,9 @@ import Home from './Home';
 import EmailVerification from './EmailVerification';
 import './index.css';
 
+// Import test utilities for debugging (remove in production)
+import './test-firebase';
+
 
 function App() {
   return (

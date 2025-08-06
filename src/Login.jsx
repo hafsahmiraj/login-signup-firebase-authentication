@@ -60,18 +60,31 @@ const Login = () => {
     setShowResendVerification(false);
 
     try {
+      console.log('Initiating Google Sign-In...');
       const result = await signInWithPopup(auth, googleProvider);
+      console.log('Google Sign-In successful:', result.user);
       // Google accounts are automatically verified
       navigate('/dashboard');
     } catch (error) {
+      console.error('Google Sign-In Error:', error);
+      console.error('Error code:', error.code);
+      console.error('Error message:', error.message);
+      
       if (error.code === 'auth/popup-closed-by-user') {
         setError('Sign-in cancelled. Please try again.');
       } else if (error.code === 'auth/popup-blocked') {
         setError('Popup blocked. Please allow popups and try again.');
+      } else if (error.code === 'auth/unauthorized-domain') {
+        setError('This domain is not authorized for OAuth operations. Please check Firebase Console settings.');
+      } else if (error.code === 'auth/operation-not-allowed') {
+        setError('Google sign-in is not enabled. Please check Firebase Console settings.');
+      } else if (error.code === 'auth/invalid-api-key') {
+        setError('Invalid API key. Please check Firebase configuration.');
+      } else if (error.code === 'auth/network-request-failed') {
+        setError('Network error. Please check your internet connection and try again.');
       } else {
-        setError('Failed to sign in with Google. Please try again.');
+        setError(`Failed to sign in with Google: ${error.message}`);
       }
-      console.error(error);
     } finally {
       setIsGoogleLoading(false);
     }
